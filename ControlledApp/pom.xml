@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>ControlledApp</artifactId>
+    <groupId>sapce.gootone.controlled</groupId>
+    <artifactId>app-example</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -22,19 +22,6 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.9</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>
-
     </dependencies>
     <build>
         <plugins>
@@ -47,7 +34,7 @@
                     <target>16</target>
                     <encoding>UTF-8</encoding>
                     <annotationProcessors>
-                        <annotationProcessor>org.pawpaw.processor.annotations.ControlledCheckingProcessor</annotationProcessor>
+                        <annotationProcessor>space.gootone.controlled.processor.ControlledCheckingProcessor</annotationProcessor>
                     </annotationProcessors>
 <!--                    <compilerArgs>-->
 <!--                        <arg>-verbose</arg>-->

@@ -1,4 +1,4 @@
-package org.pawpaw.processor.annotations;
+package space.gootone.controlled.processor;
 
 import java.util.Set;
 import java.util.TreeSet;

@@ -1,4 +1,4 @@
-package org.pawpaw.processor.annotations;
+package space.gootone.controlled.processor;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
