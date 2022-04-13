@@ -1,6 +1,7 @@
-package com.pawpaw.app;
+package space.gootone.controlled.app;
 
-import org.pawpaw.processor.annotations.Controlled;
+
+import space.gootone.controlled.processor.Controlled;
 
 @Controlled({Controlled.Function.PHONE_CALL, Controlled.Function.WE_CHAT})
 public class MyApp {

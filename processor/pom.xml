@@ -4,18 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.pawpaw</groupId>
+    <groupId>sapce.gootone.controlled</groupId>
     <artifactId>processor</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
+        <!-- for generating report -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.8.9</version>
+            <version>2.9.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
@@ -39,6 +46,8 @@
                     <execution>
                         <id>default-compile</id>
                         <configuration>
+                            <!-- Do not to apply the annotation processor on itself
+                            (without this line, a compilation error raining)-->
                             <compilerArgument>-proc:none</compilerArgument>
                         </configuration>
                     </execution>
@@ -50,11 +59,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
             </plugin>
         </plugins>
     </build>
